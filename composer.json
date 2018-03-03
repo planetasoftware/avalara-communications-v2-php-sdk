@@ -1,0 +1,38 @@
+{
+    "name": "planetasoftware/avalara-communications-v2-php-sdk",
+    "description": "PHP SDK for Avalara communications REST API V2",
+    "type": "library",
+    "license": "pending",
+    "keywords": [
+        "tax",
+        "php",
+        "sdk",
+        "avalara",
+        "rest",
+        "api v2"
+    ],
+    "homepage": "http://api.nettalkconnect.com/",
+    "support": {
+        "email": "developers@planetasoftware.com"
+    },
+    "config": {
+        "process-timeout": 5000
+    },
+    "require": {
+        "php": "^5.6 || ^7.0",
+        "guzzlehttp/guzzle":"6.*"
+    },
+    "require-dev": {
+    },
+    "autoload": {
+        "psr-4": {
+            "PlanetaSoftware\\Avalara\\Communications\\": "src/"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "PlanetaSoftware\\Avalara\\Communications\\Test\\": "test/"
+        }
+    },
+    "minimum-stability": "stable"
+}
