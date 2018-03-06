@@ -22,7 +22,7 @@ class Invoice extends BaseModel{
         'bill' => \PlanetaSoftware\Avalara\Communications\Model\Afc\Location::class,
         'exms' => \PlanetaSoftware\Avalara\Communications\Model\Afc\TaxExemption::class,
         'itms' => \PlanetaSoftware\Avalara\Communications\Model\Afc\LineItem::class,
-        'opt'  => \PlanetaSoftware\Avalara\Communications\Model\Afc\KeyValuePair::class,
+        'opt'  => \PlanetaSoftware\Avalara\Communications\Model\Common\KeyValuePair::class,
     ];
     
     /**
@@ -151,7 +151,7 @@ class Invoice extends BaseModel{
      * OptionalFields
      * Optional fields for reporting
      *
-     * @var \PlanetaSoftware\Avalara\Communications\Model\Afc\KeyValuePair[]
+     * @var \PlanetaSoftware\Avalara\Communications\Model\Common\KeyValuePair[]
      */
     public $opt = [];
 }

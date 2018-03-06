@@ -18,7 +18,7 @@ class CalcTaxesResponse extends BaseModel{
      */
     const ATTRIBUTE_MAPPING = [
         'inv' => \PlanetaSoftware\Avalara\Communications\Model\Afc\InvoiceResult::class,
-        'err' => \PlanetaSoftware\Avalara\Communications\Model\Afc\Error::class,
+        'err' => \PlanetaSoftware\Avalara\Communications\Model\Common\Error::class,
     ];
     
     /**
@@ -33,7 +33,7 @@ class CalcTaxesResponse extends BaseModel{
      * Error
      * Error message(s) related to calculation request processing
      *
-     * @var \PlanetaSoftware\Avalara\Communications\Model\Afc\Error[]
+     * @var \PlanetaSoftware\Avalara\Communications\Model\Common\Error[]
      */
     public $err = [];
 }

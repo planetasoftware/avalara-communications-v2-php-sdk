@@ -21,7 +21,7 @@ class LineItem extends BaseModel {
         'from' => \PlanetaSoftware\Avalara\Communications\Model\Afc\Location::class,
         'to' => \PlanetaSoftware\Avalara\Communications\Model\Afc\Location::class,
         'brdg' => \PlanetaSoftware\Avalara\Communications\Model\Afc\BridgeData::class,
-        'opt' => \PlanetaSoftware\Avalara\Communications\Model\Afc\KeyValuePair::class,
+        'opt' => \PlanetaSoftware\Avalara\Communications\Model\Common\KeyValuePair::class,
     ];
     
     
@@ -217,7 +217,7 @@ class LineItem extends BaseModel {
      * OptionalFields
      * Optional fields for reporting
      *
-     * @var \PlanetaSoftware\Avalara\Communications\Model\Afc\KeyValuePair[]
+     * @var \PlanetaSoftware\Avalara\Communications\Model\Common\KeyValuePair[]
      */
     public $opt;
 

@@ -20,7 +20,7 @@ class LineItemResult extends BaseModel {
     const ATTRIBUTE_MAPPING = [
         'txs' => \PlanetaSoftware\Avalara\Communications\Model\Afc\Tax::class,
         'brdg' => \PlanetaSoftware\Avalara\Communications\Model\Afc\BridgeParticipantResult::class,
-        'err' => \PlanetaSoftware\Avalara\Communications\Model\Afc\Error::class,
+        'err' => \PlanetaSoftware\Avalara\Communications\Model\Common\Error::class,
     ];
 
     /**
@@ -57,7 +57,7 @@ class LineItemResult extends BaseModel {
      * Errors
      * Error message(s) related to line item processing
      *
-     * @var \PlanetaSoftware\Avalara\Communications\Model\Afc\Error[]
+     * @var \PlanetaSoftware\Avalara\Communications\Model\Common\Error[]
      */
     public $err = [];
 

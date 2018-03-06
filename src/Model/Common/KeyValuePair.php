@@ -1,6 +1,6 @@
 <?php
 
-namespace PlanetaSoftware\Avalara\Communications\Model\Afc;
+namespace PlanetaSoftware\Avalara\Communications\Model\Common;
 
 use \PlanetaSoftware\Avalara\Communications\Model\BaseModel;
 

@@ -20,7 +20,7 @@ class InvoiceResult extends BaseModel{
     const ATTRIBUTE_MAPPING = [
         'itms' => \PlanetaSoftware\Avalara\Communications\Model\Afc\LineItemResult::class,
         'summ' => \PlanetaSoftware\Avalara\Communications\Model\Afc\SummarizedTax::class,
-        'err' => \PlanetaSoftware\Avalara\Communications\Model\Afc\Error::class,
+        'err' => \PlanetaSoftware\Avalara\Communications\Model\Common\Error::class,
     ];
     
     /**
@@ -51,7 +51,7 @@ class InvoiceResult extends BaseModel{
      * Error
      * Error message(s) related to invoice processing
      *
-     * @var \PlanetaSoftware\Avalara\Communications\Model\Afc\Error[]
+     * @var \PlanetaSoftware\Avalara\Communications\Model\Common\Error[]
      */
     public $err = [];
 }
