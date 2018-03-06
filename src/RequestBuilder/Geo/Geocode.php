@@ -43,7 +43,7 @@ class Geocode extends \PlanetaSoftware\Avalara\Communications\RequestBuilder\Req
             throw new \Exception('response was empty');
         }
         
-        $arrResponseList = json_decode($response, true);
+        $arrResponseList = json_decode($response);
         
         $arrResponseObjList = [];
         foreach($arrResponseList AS $arrResponse){

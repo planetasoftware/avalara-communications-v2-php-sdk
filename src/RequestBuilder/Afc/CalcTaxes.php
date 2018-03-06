@@ -85,7 +85,7 @@ class CalcTaxes extends \PlanetaSoftware\Avalara\Communications\RequestBuilder\R
             throw new \Exception('response was empty');
         }
         
-        return \PlanetaSoftware\Avalara\Communications\Model\Afc\CalcTaxesResponse::createFromArray(json_decode($response, true));
+        return \PlanetaSoftware\Avalara\Communications\Model\Afc\CalcTaxesResponse::createFromArray(json_decode($response));
     }
 
 }
