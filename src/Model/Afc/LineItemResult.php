@@ -33,7 +33,7 @@ class LineItemResult extends BaseModel {
 
     /**
      *
-     * @var number
+     * @var double
      */
     public $base;
 

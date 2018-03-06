@@ -87,7 +87,7 @@ class Tax extends BaseModel {
      * TaxableMeasure
      * Taxable Measure applicable to tax
      * 
-     * @var number
+     * @var double
      */
     public $tm;
 
@@ -134,7 +134,7 @@ class Tax extends BaseModel {
      * ExemptSaleAmount
      * Exempt Sale Amount
      * 
-     * @var number
+     * @var double
      */
     public $exm;
 
@@ -150,7 +150,7 @@ class Tax extends BaseModel {
      * Minutes
      * Number of minutes taxed
      * 
-     * @var number
+     * @var double
      */
     public $min;
 
@@ -166,7 +166,7 @@ class Tax extends BaseModel {
      * Rate
      * Applicable tax rate
      * 
-     * @var number
+     * @var double
      */
     public $rate;
 
@@ -183,7 +183,7 @@ class Tax extends BaseModel {
      * Amount
      * Tax Amount
      * 
-     * @var number
+     * @var double
      */
     public $tax;
 

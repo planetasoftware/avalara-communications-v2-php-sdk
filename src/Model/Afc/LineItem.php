@@ -86,7 +86,7 @@ class LineItem extends BaseModel {
     /**
      * Charge
      *
-     * @var number
+     * @var double
      */
     public $chg;
 
@@ -108,7 +108,7 @@ class LineItem extends BaseModel {
     /**
      * Minutes
      *
-     * @var number
+     * @var double
      */
     public $min;
     
@@ -128,7 +128,7 @@ class LineItem extends BaseModel {
      * PrivateLineSplit
      * % of private line split A point (p2p)
      *
-     * @var number
+     * @var double
      */
     public $plsp;
 
@@ -145,7 +145,7 @@ class LineItem extends BaseModel {
      * ProRatedPct
      * % for pro-rated calculation of fixed taxes
      *
-     * @var number
+     * @var double
      */
     public $pror;
 

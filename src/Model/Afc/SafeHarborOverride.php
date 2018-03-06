@@ -26,7 +26,7 @@ class SafeHarborOverride extends BaseModel {
      * OriginalFederalTam
      * Original Federal TAM.  64.9% = 0.649   State = (1.0 - Federal TAM)
      *
-     * @var number
+     * @var double
      */
     public $old;
 
@@ -34,7 +34,7 @@ class SafeHarborOverride extends BaseModel {
      * NewFederalTam
      * New Federal TAM.  64.9% = 0.649 State = (1.0 - Federal TAM)
      *
-     * @var number
+     * @var double
      */
     public $new;
 

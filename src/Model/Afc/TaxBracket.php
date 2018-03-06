@@ -17,7 +17,7 @@ class TaxBracket extends BaseModel{
      * Rate
      * Tax rate for tax bracket
      *
-     * @var number
+     * @var double
      */
     public $rate;
     
@@ -25,7 +25,7 @@ class TaxBracket extends BaseModel{
      * MaxBase
      * Maximum base for tax bracket
      *
-     * @var number
+     * @var double
      */
     public $mas;
 }

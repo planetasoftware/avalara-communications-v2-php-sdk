@@ -17,7 +17,7 @@ class SummarizedTax extends BaseModel {
      * MaxBase
      * Maximum base for tax bracket
      * 
-     * @var number
+     * @var double
      */
     public $max;
 
@@ -25,7 +25,7 @@ class SummarizedTax extends BaseModel {
      * MinBase
      * Minimum base for tax bracket
      * 
-     * @var number
+     * @var double
      */
     public $min;
 
@@ -33,7 +33,7 @@ class SummarizedTax extends BaseModel {
      * TotalCharge
      * Total charge amount for invoice
      * 
-     * @var number
+     * @var double
      */
     public $tchg;
 
@@ -63,7 +63,7 @@ class SummarizedTax extends BaseModel {
 
     /**
      * @see Tax::$exm
-     * @var number
+     * @var double
      */
     public $exm;
 
@@ -81,7 +81,7 @@ class SummarizedTax extends BaseModel {
 
     /**
      * @see Tax::$rate
-     * @var number
+     * @var double
      */
     public $rate;
 
@@ -93,7 +93,7 @@ class SummarizedTax extends BaseModel {
 
     /**
      * @see Tax::$tax
-     * @var number
+     * @var double
      */
     public $tax;
 
