@@ -19,6 +19,7 @@ The following are the endpoints available
     POST /api/v2/geo/Geocode
 ### Tax Calculation
     POST /api/v2/afc/CalcTaxes
+    POST /api/v2/afc/Commit
 
 Instalation
 -----------

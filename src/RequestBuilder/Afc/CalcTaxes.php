@@ -5,7 +5,7 @@ namespace PlanetaSoftware\Avalara\Communications\RequestBuilder\Afc;
 /**
  * CalcTaxes Request builder
  *
- * @property \PlanetaSoftware\Avalara\Communications\Model\Afc\CalcTaxesRequest() $request CalcTaxesRequest
+ * @property \PlanetaSoftware\Avalara\Communications\Model\Afc\CalcTaxesRequest $request CalcTaxesRequest
  * @author Oscar A <oscar@planetasoftware.com>
  */ 
 class CalcTaxes extends \PlanetaSoftware\Avalara\Communications\RequestBuilder\RequestBuilder{
