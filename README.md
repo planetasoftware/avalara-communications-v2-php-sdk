@@ -10,6 +10,16 @@ Avalara provides a telecommunications taxes solution that simplifies calculation
 Although we are not affiliated to Avalara, we use their product; this SDK is created in an effort to facilitate our communication with their API and share it with the community.
 For more info go to [Avalara Communications API reference page](https://communicationsua.avalara.net/API/AFCSaaSProTax)
 
+Available Endpoints
+-------------------
+
+The following are the endpoints available
+    
+### Jurisdiction Determination
+    POST /api/v2/geo/Geocode
+### Tax Calculation
+    POST /api/v2/afc/CalcTaxes
+
 Instalation
 -----------
 

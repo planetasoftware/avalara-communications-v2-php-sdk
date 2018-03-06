@@ -30,7 +30,7 @@ class Geocode extends \PlanetaSoftware\Avalara\Communications\RequestBuilder\Req
      * 
      * Builds and creates a result for the request.
      * 
-     * @return array Array of GeocodeResult Models
+     * @return \PlanetaSoftware\Avalara\Communications\Model\Geo\GeocodeResult[] Geocode result models
      * 
      * @throws \GuzzleHttp\Exception\RequestException
      * @throws \GuzzleHttp\Exception\ClientException

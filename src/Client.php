@@ -56,7 +56,7 @@ class Client {
      */
     public function setBasicAuthentication($username, $password){
         $this->auth = "Basic ".base64_encode("$username:$password");
-        return $this;
+        return $this; 
     }
     
     /**

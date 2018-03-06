@@ -16,6 +16,9 @@ use \PlanetaSoftware\Avalara\Communications\Model\BaseModel;
  */
 class GeocodeResult extends BaseModel{
     
+    /**
+     * Array to map attributes to class objects
+     */
     const ATTRIBUTE_MAPPING = [
         'cass' => \PlanetaSoftware\Avalara\Communications\Model\Geo\Address::class
     ];

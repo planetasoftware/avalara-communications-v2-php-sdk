@@ -9,6 +9,9 @@ namespace PlanetaSoftware\Avalara\Communications\Model;
  */
 abstract class BaseModel {
     
+    /**
+     * Array to map attributes to class objects
+     */
     const ATTRIBUTE_MAPPING = [];
 
     public function toJson() {
