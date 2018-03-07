@@ -32,6 +32,8 @@ class LineItemResult extends BaseModel {
     public $ref;
 
     /**
+     * BaseSaleAmount
+     * Value for tax inclusive calls that represents the charge minus billable taxes
      *
      * @var double
      */

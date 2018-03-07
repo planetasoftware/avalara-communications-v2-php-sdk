@@ -106,6 +106,8 @@ class CompanyData extends BaseModel{
     public $excl = [];
     
     /**
+     * CompanyIdentifier
+     * 20 byte alpha-numeric reporting field for Company Identifier
      *
      * @var string
      */

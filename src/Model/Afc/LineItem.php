@@ -222,6 +222,8 @@ class LineItem extends BaseModel {
     public $opt;
 
     /**
+     * AttributeProperty
+     * Attribute property used for supported Sales and Use t/s pairs
      *
      * @var integer
      */
