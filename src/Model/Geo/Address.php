@@ -47,5 +47,86 @@ class Address extends BaseModel{
      * @var string The zip code part of the input address 
      */
     public $zip;
+
+
+    /**
+     * Get address
+     * 
+     * @return string
+     */
+    public function getAddress() {
+        return $this->addr;
+    }
+
+    /**
+     * Get city
+     * 
+     * @return string
+     */
+    public function getCity() {
+        return $this->city;
+    }
+
+    /**
+     * Get state
+     * 
+     * @return string
+     */
+    public function getState() {
+        return $this->st;
+    }
+
+    /**
+     * Get Zip Code / Postal Code
+     * 
+     * @return string
+     */
+    public function getZip() {
+        return $this->zip;
+    }
+
+    /**
+     * Set address
+     *
+     * @param string $addr
+     * @return $this
+     */
+    public function setAddress(string $addr){
+        $this->addr = $addr;
+        return $this;
+    }
+
+    /**
+     * Set city
+     *
+     * @param string $city
+     * @return $this
+     */
+    public function setCity(string $city){
+        $this->city = $city;
+        return $this;
+    }
+
+    /**
+     * Set state
+     *
+     * @param string $st
+     * @return $this
+     */
+    public function setState(string $st){
+        $this->st = $st;
+        return $this;
+    }
+
+    /**
+     * Set Zip Code / Postal Code
+     *
+     * @param string $zip
+     * @return $this
+     */
+    public function setZip(string $zip){
+        $this->zip = $zip;
+        return $this;
+    }
     
 }

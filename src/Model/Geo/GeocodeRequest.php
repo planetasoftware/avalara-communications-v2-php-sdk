@@ -45,5 +45,86 @@ class GeocodeRequest extends Address{
      * @var double The longitude (in degrees) of the location.
      */
     public $long;
+
+    /**
+     * Get reference
+     * 
+     * @return string
+     */
+    public function getReference() {
+        return $this->ref;
+    }
+
+    /**
+     * Get CASS (Coding Accuracy Support System)
+     * 
+     * @return boolean
+     */
+    public function getIsCass() {
+        return $this->cass;
+    }
+
+    /**
+     * Get latitude
+     * 
+     * @return double
+     */
+    public function getLatitude() {
+        return $this->lat;
+    }
+
+    /**
+     * Get longitude
+     * 
+     * @return double
+     */
+    public function getLongitude() {
+        return $this->long;
+    }
+
+
+    /**
+     * Set reference
+     *
+     * @param string $ref
+     * @return $this
+     */
+    public function setReference(string $ref){
+        $this->ref = $ref;
+        return $this;
+    }
+
+    /**
+     * Set CASS (Coding Accuracy Support System)
+     *
+     * @param boolean $cass
+     * @return $this
+     */
+    public function setCass(boolean $cass){
+        $this->cass = $cass;
+        return $this;
+    }
+
+    /**
+     * Set latitude
+     *
+     * @param double $lat
+     * @return $this
+     */
+    public function setLatitude(double $lat){
+        $this->lat = $lat;
+        return $this;
+    }
+
+    /**
+     * Set longitude
+     *
+     * @param double $long
+     * @return $this
+     */
+    public function setLongitude(double $long){
+        $this->long = $long;
+        return $this;
+    }
     
 }

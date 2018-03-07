@@ -29,4 +29,46 @@ class Error extends BaseModel {
      */
     public $msg;
 
+    /**
+     * Get code
+     * 
+     * @return integer
+     */
+    public function getCode() {
+        return $this->code;
+    }
+
+    /**
+     * Get message
+     * 
+     * @return string
+     */
+    public function getMessage() {
+        return $this->msg;
+    }
+
+    /**
+     * Set code
+     *
+     * @param integer $code
+     * @return $this
+     */
+    public function setCode(int $code){
+        $this->code = $code;
+        return $this;
+    }
+
+     /**
+     * Set message
+     *
+     * @param string $msg
+     * @return $this
+     */
+    public function setMessage(string $msg){
+        $this->msg = $msg;
+        return $this;
+    }
+
+
+
 }

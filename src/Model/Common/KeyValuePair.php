@@ -30,4 +30,45 @@ class KeyValuePair extends BaseModel {
      */
     public $val;
 
+    /**
+     * Get key
+     * 
+     * @return string
+     */
+    public function getKey() {
+        return $this->key;
+    }
+
+    /**
+     * Get value
+     * 
+     * @return string
+     */
+    public function getValue() {
+        return $this->val;
+    }
+
+    /**
+     * Set key
+     *
+     * @param string $key
+     * @return $this
+     */
+    public function setKey(string $key){
+        $this->key = $key;
+        return $this;
+    }
+
+    /**
+     * Set value
+     *
+     * @param string $val
+     * @return $this
+     */
+    public function setValue(string $val){
+        $this->val = $val;
+        return $this;
+    }
+
+
 }
