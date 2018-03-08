@@ -148,9 +148,9 @@ class GeocodeResult extends BaseModel{
     /**
      * Get CASS (Coding Accuracy Support System)
      * 
-     * @return boolean
+     * @return \PlanetaSoftware\Avalara\Communications\Model\Geo\Address
      */
-    public function getIsCodingAccuracy() {
+    public function getCassAddress() {
         return $this->cass;
     }
 
@@ -240,7 +240,7 @@ class GeocodeResult extends BaseModel{
      * 
      * @return integer
      */
-    public function getPcode() {
+    public function getPCode() {
         return $this->pcd;
     }
 
@@ -274,12 +274,12 @@ class GeocodeResult extends BaseModel{
     }
 
     /**
-     * Set CASS (Coding Accuracy Support System)
+     * Set CASS (Coding Accuracy Support System) Address
      *
-     * @param boolean $cass
+     * @param \PlanetaSoftware\Avalara\Communications\Model\Geo\Address $cass
      * @return $this
      */
-    public function setCass(boolean $cass){
+    public function setCassAddress(\PlanetaSoftware\Avalara\Communications\Model\Geo\Address $cass){
         $this->cass = $cass;
         return $this;
     }
@@ -298,7 +298,7 @@ class GeocodeResult extends BaseModel{
     /**
      * Set census tract
      *
-     * @param integer $cBlk
+     * @param integer $cTrc
      * @return $this
      */
     public function setCensusTract(int $cTrc){
@@ -389,7 +389,7 @@ class GeocodeResult extends BaseModel{
      * @param integer $pcd
      * @return $this
      */
-    public function setPcode(int $pcd){
+    public function setPCode(int $pcd){
         $this->pcd = $pcd;
         return $this;
     }
