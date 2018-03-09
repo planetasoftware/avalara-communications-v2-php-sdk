@@ -56,8 +56,54 @@ class CalcTaxesRequest extends BaseModel{
      * @var \PlanetaSoftware\Avalara\Communications\Model\Afc\SafeHarborOverride[]
      */
     public $sovr = [];
-    
-    
+
+    /**
+     * Get company data
+     * 
+     * @return \PlanetaSoftware\Avalara\Communications\Model\Afc\CompanyData
+     */
+    public function getCompanyData() {
+        return $this->cmpn;
+    }
+
+    /**
+     * Get invoice list
+     * 
+     * @return \PlanetaSoftware\Avalara\Communications\Model\Afc\Invoice[]
+     */
+    public function getInvoiceList() {
+        return $this->inv;
+    }
+
+    /**
+     * Get tax override list
+     * 
+     * @return \PlanetaSoftware\Avalara\Communications\Model\Afc\TaxOverride[]
+     */
+    public function getTaxOverrideList() {
+        return $this->ovr;
+    }
+
+    /**
+     * Get safe harbor override list
+     * 
+     * @return \PlanetaSoftware\Avalara\Communications\Model\Afc\SafeHarborOverride[]
+     */
+    public function getSafeHarborOverrideList() {
+        return $this->sovr;
+    }
+
+    /**
+     * Set company data
+     *
+     * @param \PlanetaSoftware\Avalara\Communications\Model\Afc\CompanyData $cmpn
+     * @return $this
+     */
+    public function setCompanyData(\PlanetaSoftware\Avalara\Communications\Model\Afc\CompanyData $cmpn){
+        $this->cmpn = $cmpn;
+        return $this;
+    }
+      
     /**
      * Add new invoice
      * 
@@ -68,7 +114,7 @@ class CalcTaxesRequest extends BaseModel{
         $this->inv[] = $invoice;
         return $this;
     }
-    
+
     /**
      * Add new Tax override
      * 

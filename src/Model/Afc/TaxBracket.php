@@ -28,4 +28,45 @@ class TaxBracket extends BaseModel{
      * @var double
      */
     public $mas;
+
+    /**
+     * Get tax rate for tax bracket
+     * 
+     * @return double
+     */
+    public function getRate() {
+        return $this->rate;
+    }
+
+    /**
+     * Get maximum base for tax bracket
+     * 
+     * @return double
+     */
+    public function getMaxBase() {
+        return $this->mas;
+    }    
+
+    /**
+     * Set tax rate for tax bracket
+     *
+     * @param double $rate 
+     * @return $this
+     */
+    public function setRate(double $rate){
+        $this->rate = $rate;
+        return $this;
+    }
+
+    /**
+     * Set minimum base for tax bracket
+     *
+     * @param double $mas
+     * @return $this
+     */
+    public function setMaxBase(double $mas){
+        $this->mas = $mas;
+        return $this;
+    }
+
 }

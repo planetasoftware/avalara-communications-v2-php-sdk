@@ -38,4 +38,64 @@ class SafeHarborOverride extends BaseModel {
      */
     public $new;
 
+    /**
+     * Get safe harbor type
+     * 
+     * @return integer
+     */
+    public function getSafeHarborType() {
+        return $this->sh;
+    }
+
+    /**
+     * Get original federal TAM
+     * 
+     * @return double
+     */
+    public function getOriginalFederalTam() {
+        return $this->old;
+    }
+
+    /**
+     * Get new federal TAM
+     * 
+     * @return double
+     */
+    public function getNewFederalTam() {
+        return $this->new;
+    }
+
+    /**
+     * Set safe harbor type
+     *
+     * @param integer $sh
+     * @return $this
+     */
+    public function setSafeHarborType(int $sh){
+        $this->sh = $sh;
+        return $this;
+    }
+
+    /**
+     * Set original federal TAM
+     *
+     * @param double $old
+     * @return $this
+     */
+    public function setOriginalFederalTam(double $old){
+        $this->old = $old;
+        return $this;
+    }
+
+    /**
+     * Set new federal TAM
+     *
+     * @param double $new
+     * @return $this
+     */
+    public function setNewFederalTam(double $new){
+        $this->new = $new;
+        return $this;
+    }
+
 }

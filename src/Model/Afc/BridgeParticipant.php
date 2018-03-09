@@ -36,4 +36,46 @@ class BridgeParticipant extends BaseModel{
      * @var \PlanetaSoftware\Avalara\Communications\Model\Afc\Location
      */
     public $loc;
+
+    /**
+     * Get reference
+     * 
+     * @return string
+     */
+    public function getReference() {
+        return $this->ref;
+    }
+
+    /**
+     * Get location
+     * 
+     * @return \PlanetaSoftware\Avalara\Communications\Model\Afc\Location
+     */
+    public function getLocation() {
+        return $this->loc;
+    }
+
+    /**
+     * Set reference
+     *
+     * @param string $ref
+     * @return $this
+     */
+    public function setReference(string $ref){
+        $this->ref = $ref;
+        return $this;
+    }
+
+   
+
+    /**
+     * Set location
+     *
+     * @param \PlanetaSoftware\Avalara\Communications\Model\Afc\Location $loc
+     * @return $this
+     */
+    public function setLocation(\PlanetaSoftware\Avalara\Communications\Model\Afc\Location $loc){
+        $this->loc = $loc;
+        return $this;
+    }
 }

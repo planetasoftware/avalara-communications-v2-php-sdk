@@ -112,7 +112,145 @@ class CompanyData extends BaseModel{
      * @var string
      */
     public $idnt;
+
+    /**
+     * Get business class
+     * 
+     * @return integer
+     */
+    public function getBusinessClass() {
+        return $this->bscl;
+    }
+
+    /**
+     * Get service class
+     * 
+     * @return integer
+     */
+    public function getServiceClass() {
+        return $this->svcl;
+    }
     
-    
+    /**
+     * Get facilities
+     * 
+     * @return boolean
+     */
+    public function getIsFacilitiesBased() {
+        return $this->fclt;
+    }
+
+    /**
+     * Get franchise agreement
+     * 
+     * @return boolean
+     */
+    public function getHasFranchiseAgreement() {
+        return $this->frch;
+    }
+
+    /**
+     * Get regulated
+     * 
+     * @return boolean
+     */
+    public function getIsRegulated() {
+        return $this->reg;
+    }
+
+    /**
+     * Get exclusion list
+     * 
+     * @return \PlanetaSoftware\Avalara\Communications\Model\Afc\Exclusion[]
+     */
+    public function getExclusionList() {
+        return $this->excl;
+    }
+
+    /**
+     * Get company identifier
+     * 
+     * @return string
+     */
+    public function getCompanyIdentifier() {
+        return $this->idnt;
+    }
+
+    /**
+     * Set business class
+     *
+     * @param integer $bscl
+     * @return $this
+     */
+    public function setBusinessClass(int $bscl){
+        $this->bscl = $bscl;
+        return $this;
+    }
+
+    /**
+     * Set service class
+     *
+     * @param integer $svcl
+     * @return $this
+     */
+    public function setServiceClass(int $svcl){
+        $this->svcl = $svcl;
+        return $this;
+    }
+
+    /**
+     * Set facilities
+     *
+     * @param boolean $fclt
+     * @return $this
+     */
+    public function setFacilitiesBased(boolean $fclt){
+        $this->fclt = $fclt;
+        return $this;
+    }
+
+    /**
+     * Set franchise agreement
+     *
+     * @param boolean $frch
+     * @return $this
+     */
+    public function setFranchiseAgreement(boolean $frch){
+        $this->frch = $frch;
+        return $this;
+    }
+
+    /**
+     * Set regulated
+     *
+     * @param boolean $reg
+     * @return $this
+     */
+    public function setRegulated(boolean $reg){
+        $this->reg = $reg;
+        return $this;
+    }
+
+    /**
+     * Add new exclusion
+     * 
+     * @param \PlanetaSoftware\Avalara\Communications\Model\Afc\Exclusion $exclusion
+     * @return $this
+     */
+    public function addExclusion(\PlanetaSoftware\Avalara\Communications\Model\Afc\Exclusion $exclusion){
+        $this->excl[] = $exclusion;
+        return $this;
+    }
+
+    /**
+     * Set company identifier
+     *
+     * @param integer $idnt
+     * @return $this
+     */
+    public function setCompanyIdentifier(int $idnt){
+        $this->idnt = $idnt;
+        return $this;
+    }   
 
 }

@@ -54,4 +54,84 @@ class InvoiceResult extends BaseModel{
      * @var \PlanetaSoftware\Avalara\Communications\Model\Common\Error[]
      */
     public $err = [];
+
+    /**
+     * Get document code
+     * 
+     * @return string
+     */
+    public function getDocumentCode() {
+        return $this->doc;
+    }
+
+    /**
+     * Get line item result list
+     * 
+     * @return \PlanetaSoftware\Avalara\Communications\Model\Afc\LineItemResult[]
+     */
+    public function getLineItemList() {
+        return $this->itms;
+    }
+
+    /**
+     * Get summarized tax list
+     * 
+     * @return \PlanetaSoftware\Avalara\Communications\Model\Afc\SummarizedTax[]
+     */
+    public function getSummarizedTaxList() {
+        return $this->summ;
+    }
+
+    /**
+     * Get error list
+     * 
+     * @return \PlanetaSoftware\Avalara\Communications\Model\Common\Error[]
+     */
+    public function getErrorList() {
+        return $this->err;
+    }
+
+    /**
+     * Set document code
+     *
+     * @param string $doc
+     * @return $this
+     */
+    public function setDocumentCode(string $doc){
+        $this->doc = $doc;
+        return $this;
+    }
+
+    /**
+     * Add new line item result
+     * 
+     * @param \PlanetaSoftware\Avalara\Communications\Model\Afc\LineItemResult $lineItem
+     * @return $this
+     */
+    public function addLineItem(\PlanetaSoftware\Avalara\Communications\Model\Afc\LineItemResult $lineItem){
+        $this->itms[] = $lineItem;
+        return $this;
+    }
+
+    /**
+     * Add new summarized tax
+     * 
+     * @param \PlanetaSoftware\Avalara\Communications\Model\Afc\SummarizedTax $summarizedTax
+     * @return $this
+     */
+    public function addSummarizedTax(\PlanetaSoftware\Avalara\Communications\Model\Afc\SummarizedTax $summarizedTax){
+        $this->summ[] = $summarizedTax;
+        return $this;
+    }
+
+    /**
+     * Add new error
+     * 
+     * @param \PlanetaSoftware\Avalara\Communications\Model\Common\Error $error
+     * @return $this
+     */
+    public function addError(\PlanetaSoftware\Avalara\Communications\Model\Common\Error $error){
+        $this->err[] = $error;
+        return $this;
+    }
 }

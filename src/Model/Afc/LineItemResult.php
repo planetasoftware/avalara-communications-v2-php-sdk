@@ -63,4 +63,106 @@ class LineItemResult extends BaseModel {
      */
     public $err = [];
 
+    /**
+     * Get reference
+     * 
+     * @return string
+     */
+    public function getReference() {
+        return $this->ref;
+    }
+
+    /**
+     * Get base sale amount
+     * 
+     * @return double
+     */
+    public function getBaseSaleAmount() {
+        return $this->base;
+    }
+
+    /**
+     * Get taxes
+     * 
+     * @return \PlanetaSoftware\Avalara\Communications\Model\Afc\Tax[]
+     */
+    public function getTaxList() {
+        return $this->txs;
+    }
+
+    /**
+     * Get bridge participants result
+     * 
+     * @return \PlanetaSoftware\Avalara\Communications\Model\Afc\BridgeParticipantResult[]
+     */
+    public function getBridgeParticipantList() {
+        return $this->brdg;
+    }
+
+    /**
+     * Get error list
+     * 
+     * @return \PlanetaSoftware\Avalara\Communications\Model\Common\Error[]
+     */
+    public function getErrorList() {
+        return $this->err;
+    }
+
+    /**
+     * Set reference
+     *
+     * @param string $ref
+     * @return $this
+     */
+    public function setReference(string $ref){
+        $this->ref = $ref;
+        return $this;
+    }
+
+    /**
+     * Set base sale amount
+     *
+     * @param double $base
+     * @return $this
+     */
+    public function setBaseSaleAmount(double $base){
+        $this->base = $base;
+        return $this;
+    }
+
+    /**
+     * Add new Tax
+     * 
+     * @param \PlanetaSoftware\Avalara\Communications\Model\Afc\Tax $tax
+     * @return $this
+     */
+    public function addTax(\PlanetaSoftware\Avalara\Communications\Model\Afc\Tax $tax){
+        $this->txs[] = $tax;
+        return $this;
+    }
+
+    /**
+     * Add bridge participants result
+     *
+     * @param \PlanetaSoftware\Avalara\Communications\Model\Afc\BridgeParticipantResult $bridgeParticipant
+     * @return $this
+     */
+
+    public function addBridgeParticipant(\PlanetaSoftware\Avalara\Communications\Model\Afc\BridgeParticipantResult $bridgeParticipant){
+        $this->prts[] = $bridgeParticipant;
+        return $this;
+    }
+
+    /**
+     * Add new error
+     * 
+     * @param \PlanetaSoftware\Avalara\Communications\Model\Common\Error $error
+     * @return $this
+     */
+    public function addError(\PlanetaSoftware\Avalara\Communications\Model\Common\Error $error){
+        $this->err[] = $error;
+        return $this;
+    }
+
+
 }
