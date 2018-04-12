@@ -154,4 +154,234 @@ class Invoice extends BaseModel{
      * @var \PlanetaSoftware\Avalara\Communications\Model\Common\KeyValuePair[]
      */
     public $opt = [];
+
+    /**
+     * Get document code
+     * 
+     * @return string
+     */
+    public function getDocumentCode() {
+        return $this->doc;
+    }
+
+    /**
+     * Get committed
+     * 
+     * @return boolean
+     */
+    public function getIsCommitted() {
+        return $this->cmmt;
+    }
+
+    /**
+     * Get bill to location
+     * 
+     * @return \PlanetaSoftware\Avalara\Communications\Model\Afc\Location
+     */
+    public function getBillToLocation() {
+        return $this->bill;
+    }
+
+    /**
+     * Get customer type
+     * 
+     * @return integer
+     */
+    public function getCustomerType() {
+        return $this->cust;
+    }
+
+    /**
+     * Get lifeline
+     * 
+     * @return boolean
+     */
+    public function getIsCustomerLifeline() {
+        return $this->lfln;
+    }
+
+    /**
+     * Get date
+     * 
+     * @return string
+     */
+    public function getDate() {
+        return $this->date;
+    }
+
+    /**
+     * Get tax exemptions list
+     * 
+     * @return \PlanetaSoftware\Avalara\Communications\Model\Afc\TaxExemption[]
+     */
+    public function getTaxExemptionList() {
+        return $this->exms;
+    }
+
+    /**
+     * Get line item list
+     * 
+     * @return \PlanetaSoftware\Avalara\Communications\Model\Afc\LineItem[]
+     */
+    public function getLineItemList() {
+        return $this->itms;
+    }
+
+    /**
+     * Get invoice mode
+     * 
+     * @return boolean
+     */
+    public function getInvoiceMode() {
+        return $this->invm;
+    }
+
+    /**
+     * Get return detail
+     * 
+     * @return boolean
+     */
+    public function getIsReturnDetail() {
+        return $this->dtl;
+    }
+
+    /**
+     * Get return summary
+     * 
+     * @return boolean
+     */
+    public function getIsReturnSummary() {
+        return $this->summ;
+    }
+
+    /**
+     * Get optional fields list
+     * 
+     * @return \PlanetaSoftware\Avalara\Communications\Model\Common\KeyValuePair[]
+     */
+    public function getOptionalFieldList() {
+        return $this->opt;
+    }
+
+    /**
+     * Set document code
+     *
+     * @param string $doc
+     * @return $this
+     */
+    public function setDocumentCode(string $doc){
+        $this->doc = $doc;
+        return $this;
+    }
+
+    /**
+     * Set commit
+     *
+     * @param boolean $cmmt
+     * @return $this
+     */
+    public function setCommitted(boolean $cmmt){
+        $this->cmmt = $cmmt;
+        return $this;
+    }
+
+    /**
+     * Set bill to location
+     *
+     * @param \PlanetaSoftware\Avalara\Communications\Model\Afc\Location $bill
+     * @return $this
+     */
+    public function setBillToLocation(\PlanetaSoftware\Avalara\Communications\Model\Afc\Location $bill){
+        $this->bill = $bill;
+        return $this;
+    }
+
+    /**
+     * Set customer type
+     *
+     * @param integer $cust
+     * @return $this
+     */
+    public function setCustomerType(int $cust){
+        $this->cust = $cust;
+        return $this;
+    }
+
+    /**
+     * Set lifeline
+     *
+     * @param boolean $lfln
+     * @return $this
+     */
+    public function setCustomerLifeline(boolean $lfln){
+        $this->lfln = $lfln;
+        return $this;
+    }
+
+    /**
+     * Set date
+     *
+     * @param string $date
+     * @return $this
+     */
+    public function setDate(boolean $date){
+        $this->date = $date;
+        return $this;
+    }
+
+    /**
+     * Add new tax exemption
+     * 
+     * @param \PlanetaSoftware\Avalara\Communications\Model\Afc\TaxExemption $taxExexmption
+     * @return $this
+     */
+    public function addTaxExemption(\PlanetaSoftware\Avalara\Communications\Model\Afc\TaxExemption $taxExexmption){
+        $this->exms[] = $taxExexmption;
+        return $this;
+    }
+
+    /**
+     * Add new line item
+     * 
+     * @param \PlanetaSoftware\Avalara\Communications\Model\Afc\LineItem $lineItem
+     * @return $this
+     */
+    public function addLineItem(\PlanetaSoftware\Avalara\Communications\Model\Afc\LineItem $lineItem){
+        $this->itms[] = $lineItem;
+        return $this;
+    }
+
+    /**
+     * Set invoice mode
+     *
+     * @param boolean $invm
+     * @return $this
+     */
+    public function setInvoiceMode(boolean $invm){
+        $this->invm = $invm;
+        return $this;
+    }
+
+    /**
+     * Set return detail
+     *
+     * @param boolean $dtl
+     * @return $this
+     */
+    public function setReturnDetail(boolean $dtl){
+        $this->dtl = $dtl;
+        return $this;
+    }
+
+    /**
+     * Set return detail
+     *
+     * @param boolean $summ
+     * @return $this
+     */
+    public function setReturnSummary(boolean $summ){
+        $this->summ = $summ;
+        return $this;
+    }
+
 }

@@ -36,4 +36,64 @@ class Exclusion extends BaseModel{
      * @var boolean
      */
     public $excl;
+
+    /**
+     * Get Country
+     * 
+     * @return string
+     */
+    public function getCountry() {
+        return $this->ctry;
+    }
+
+    /**
+     * Get state
+     * 
+     * @return string
+     */
+    public function getState() {
+        return $this->st;
+    }
+
+    /**
+     * Get exlusion
+     * 
+     * @return boolean
+     */
+    public function getHasExclusion() {
+        return $this->excl;
+    }
+
+    /**
+     * Set country
+     *
+     * @param string $ctry
+     * @return $this
+     */
+    public function setCountry(string $ctry){
+        $this->ctry = $ctry;
+        return $this;
+    }
+
+    /**
+     * Set state
+     *
+     * @param string $st
+     * @return $this
+     */
+    public function setState(string $st){
+        $this->st = $st;
+        return $this;
+    }
+
+    /**
+     * Set exclusion
+     *
+     * @param boolean $excl
+     * @return $this
+     */
+    public function setExclusion(boolean $excl){
+        $this->excl = $excl;
+        return $this;
+    }
 }

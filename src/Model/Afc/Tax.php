@@ -208,4 +208,325 @@ class Tax extends BaseModel {
      */
     public $tid;
 
+    /**
+     * Get billable tax
+     * 
+     * @return boolean
+     */
+    public function getIsBillable() {
+        return $this->bill;
+    }
+
+    /**
+     * Get compliance tax
+     * 
+     * @return boolean
+     */
+    public function getIsCompliance() {
+        return $this->cmpl;
+    }
+
+    /**
+     * Get taxable measure
+     * 
+     * @return double
+     */
+    public function getTaxableMeasure() {
+        return $this->tm;
+    }
+
+    /**
+     * Get calculation
+     * 
+     * @return integer
+     */
+    public function getCalculation() {
+        return $this->calc;
+    }   
+
+    /**
+     * Get tax category
+     * 
+     * @return string
+     */
+    public function getCategory() {
+        return $this->cat;
+    }  
+
+    /**
+     * Get category id
+     * 
+     * @return integer
+     */
+    public function getCategoryId() {
+        return $this->cid;
+    }
+
+    /**
+     * Get tax name
+     * 
+     * @return string
+     */
+    public function getName() {
+        return $this->name;
+    }
+
+     /**
+     * Get exempt sale amount
+     * 
+     * @return double
+     */
+    public function getExemptSaleAmount() {
+        return $this->exm;
+    }
+
+    /**
+     * Get number of lines taxed
+     * 
+     * @return integer
+     */
+    public function getLinesTaxed() {
+        return $this->lns;
+    }
+
+    /**
+     * Get minutes
+     * 
+     * @return double
+     */
+    public function getMinutes() {
+        return $this->min;
+    }
+
+    /**
+     * Get PCode
+     * 
+     * @return integer
+     */
+    public function getPCode() {
+        return $this->pcd;
+    }
+
+    /**
+     * Get tax rate
+     * 
+     * @return double
+     */
+    public function getRate() {
+        return $this->rate;
+    }
+
+    /**
+     * Get surcharge
+     * 
+     * @return boolean
+     */
+    public function getIsSurcharge() {
+        return $this->sur;
+    }
+
+    /**
+     * Get tax 
+     * 
+     * @return double
+     */
+    public function getTax() {
+        return $this->tax;
+    }
+
+    /**
+     * Get tax level 
+     * 
+     * @return integer
+     */
+    public function getLevel() {
+        return $this->lvl;
+    }
+
+    /**
+     * Get tax type id 
+     * 
+     * @return integer
+     */
+    public function getTypeId() {
+        return $this->tid;
+    }
+
+    /**
+     * Set billable tax
+     *
+     * @param boolean $bill
+     * @return $this
+     */
+    public function setBillable(boolean $bill){
+        $this->bill = $bill;
+        return $this;
+    }
+
+    /**
+     * Set compliance tax
+     *
+     * @param boolean $cmpl
+     * @return $this
+     */
+    public function setCompliance(boolean $cmpl){
+        $this->cmpl = $cmpl;
+        return $this;
+    }
+
+    /**
+     * Set taxable measure
+     *
+     * @param double $tm
+     * @return $this
+     */
+    public function setTaxableMeasure(double $tm){
+        $this->tm = $tm;
+        return $this;
+    }
+
+    /**
+     * Set calculation
+     *
+     * @param integer $calc
+     * @return $this
+     */
+    public function setCalculation(int $calc){
+        $this->calc = $calc;
+        return $this;
+    }
+
+    /**
+     * Set tax category
+     *
+     * @param string $cat
+     * @return $this
+     */
+    public function setCategory(string $cat){
+        $this->cat = $cat;
+        return $this;
+    }
+
+    /**
+     * Set category id
+     *
+     * @param integer $cid
+     * @return $this
+     */
+    public function setCategoryId(int $cid){
+        $this->cid = $cid;
+        return $this;
+    } 
+
+    /**
+     * Set tax name
+     *
+     * @param string $name
+     * @return $this
+     */
+    public function setName(string $name){
+        $this->name = $name;
+        return $this;
+    }
+
+    /**
+     * Set tax name
+     *
+     * @param double $exm
+     * @return $this
+     */
+    public function setExemptSaleAmount(double $exm){
+        $this->exm = $exm;
+        return $this;
+    }
+
+    /**
+     * Set number of lines taxed
+     *
+     * @param integer $lns
+     * @return $this
+     */
+    public function setLinesTaxed(int $lns){
+        $this->lns = $lns;
+        return $this;
+    }
+
+    /**
+     * Set minutes
+     *
+     * @param double $min
+     * @return $this
+     */
+    public function setMinutes(double $min){
+        $this->min = $min;
+        return $this;
+    }
+
+    /**
+     * Set PCode
+     *
+     * @param integer $pcd
+     * @return $this
+     */
+    public function setPCode(int $pcd){
+        $this->pcd = $pcd;
+        return $this;
+    }
+
+    /**
+     * Set tax rate
+     *
+     * @param double $rate
+     * @return $this
+     */
+    public function setRate(double $rate){
+        $this->rate = $rate;
+        return $this;
+    }
+
+    /**
+     * Set surcharge
+     *
+     * @param boolean $sur
+     * @return $this
+     */
+    public function setSurcharge(boolean $sur){
+        $this->sur = $sur;
+        return $this;
+    }
+
+    /**
+     * Set tax
+     *
+     * @param double $tax
+     * @return $this
+     */
+    public function setTax(double $tax){
+        $this->tax = $tax;
+        return $this;
+    }
+
+    /**
+     * Set tax level
+     *
+     * @param integer $lvl
+     * @return $this
+     */
+    public function setLevel(int $lvl){
+        $this->lvl = $lvl;
+        return $this;
+    }
+
+    /**
+     * Set tax type id
+     *
+     * @param integer $tid
+     * @return $this
+     */
+    public function setTypeId(int $tid){
+        $this->tid = $tid;
+        return $this;
+    }
+
+
 }

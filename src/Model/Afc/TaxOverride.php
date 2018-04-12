@@ -115,4 +115,124 @@ class TaxOverride extends BaseModel {
      */
     public $brkt;
 
+    /**
+     * Get location
+     * 
+     * @return \PlanetaSoftware\Avalara\Communications\Model\Afc\Location
+     */
+    public function getLocation() {
+        return $this->loc;
+    }
+
+    /**
+     * Get scope for override 
+     * 
+     * @return integer
+     */
+    public function getScope() {
+        return $this->scp;
+    }
+
+    /**
+     * Get tax type id
+     * 
+     * @return integer
+     */
+    public function getType() {
+        return $this->tid;
+    }
+
+    /**
+     * Get tax level 
+     * 
+     * @return integer
+     */
+    public function getLevel() {
+        return $this->lvl;
+    }
+
+    /**
+     * Get level exemptible
+     * 
+     * @return boolean
+     */
+    public function getIsLevelExemptible() {
+        return $this->lvlExm;
+    }
+
+    /**
+     * Get tax brackets
+     * 
+     * @return \PlanetaSoftware\Avalara\Communications\Model\Afc\TaxBracket
+     */
+    public function getBracket() {
+        return $this->brkt;
+    }
+
+    /**
+     * Set location
+     *
+     * @param \PlanetaSoftware\Avalara\Communications\Model\Afc\Location $loc
+     * @return $this
+     */
+    public function setLocation(\PlanetaSoftware\Avalara\Communications\Model\Afc\Location $loc){
+        $this->loc = $loc;
+        return $this;
+    }
+
+    /**
+     * Set scope for override 
+     *
+     * @param integer $scp
+     * @return $this
+     */
+    public function setScope(int $scp){
+        $this->scp = $scp;
+        return $this;
+    }
+
+    /**
+     * Set tax type id
+     *
+     * @param integer $tid
+     * @return $this
+     */
+    public function setType(int $tpe){
+        $this->tid = $tid;
+        return $this;
+    }
+
+    /**
+     * Set tax level
+     *
+     * @param integer $lvl
+     * @return $this
+     */
+    public function setLevel(int $lvl){
+        $this->lvl = $lvl;
+        return $this;
+    }
+
+    /**
+     * Set level exemptible
+     *
+     * @param boolean $lvlExm
+     * @return $this
+     */
+    public function setLevelExemptible(boolean $lvlExm){
+        $this->lvlExm = $lvlExm;
+        return $this;
+    }
+
+    /**
+     * Set tax brackets
+     *
+     * @param \PlanetaSoftware\Avalara\Communications\Model\Afc\TaxBracket $taxBracket
+     * @return $this
+     */
+    public function setBracket(\PlanetaSoftware\Avalara\Communications\Model\Afc\TaxBracket $taxBracket){
+        $this->brkt = $taxBrackets;
+        return $this;
+    }
+
 }

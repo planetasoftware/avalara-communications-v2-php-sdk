@@ -44,6 +44,67 @@ class BridgeData extends BaseModel {
      *
      * @var \PlanetaSoftware\Avalara\Communications\Model\Afc\BridgeParticipant[]
      */
-    public $prts;
+    public $prts[];
+
+    /**
+     * Get process invalid participant
+     * 
+     * @return boolean
+     */
+    public function getIsProcessInvalidParticipant() {
+        return $this->proc;
+    }
+
+    /**
+     * Get return participant taxes
+     * 
+     * @return boolean
+     */
+    public function getIsReturnParticipantTaxes() {
+        return $this->rtrn;
+    }
+
+    /**
+     * Get bridge participants
+     * 
+     * @return \PlanetaSoftware\Avalara\Communications\Model\Afc\BridgeParticipant[]
+     */
+    public function getBridgeParticipants() {
+        return $this->prts;
+    }
+
+    /**
+     * Set process invalid participant
+     *
+     * @param boolean $proc
+     * @return $this
+     */
+    public function setProcessInvalidParticipant(boolean $proc){
+        $this->proc = $proc;
+        return $this;
+    }
+
+    /**
+     * Set return participant taxes
+     *
+     * @param boolean $rtrn
+     * @return $this
+     */
+    public function setReturnParticipantTaxes(boolean $rtrn){
+        $this->rtrn = $rtrn;
+        return $this;
+    }
+
+    /**
+     * Add bridge participants
+     *
+     * @param \PlanetaSoftware\Avalara\Communications\Model\Afc\BridgeParticipant $bridgeParticipant
+     * @return $this
+     */
+
+    public function addBridgeParticipant(\PlanetaSoftware\Avalara\Communications\Model\Afc\BridgeParticipant $bridgeParticipant){
+        $this->prts[] = $bridgeParticipant;
+        return $this;
+    }
 
 }
