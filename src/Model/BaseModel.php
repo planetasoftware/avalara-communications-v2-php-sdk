@@ -41,7 +41,7 @@ abstract class BaseModel {
                 if (is_array($value) || array() === $array) {
                     $result = [];
                     foreach ($value AS $singleValue) {
-                        $result = self::createFromArray((array) $singleValue, $class::ATTRIBUTE_MAPPING[$key]);
+                        $result[] = self::createFromArray((array) $singleValue, $class::ATTRIBUTE_MAPPING[$key]);
                     }
                     $obj->$key = $result;
                 } else {
