@@ -14,6 +14,8 @@ abstract class BaseModel {
      */
     const ATTRIBUTE_MAPPING = [];
 
+    private $rawJson;
+
     public function toJson() {
         return json_encode($this);
     }
@@ -21,10 +23,8 @@ abstract class BaseModel {
     public function toArray() {
         return json_decode($this->toJson());
     }
-    
 
     public static function createFromArray($array, $class = null) {
-        
         //if no class, take the caller class
         if(is_null($class)){
             $class = static::class;
@@ -32,6 +32,9 @@ abstract class BaseModel {
         
         //create object
         $obj = new $class();
+
+	//save json version of object
+	$obj->setRawJson(json_encode($array));
 
         //foreach $key => $value pair on the array
         foreach ($array as $key => $value) {
@@ -54,6 +57,14 @@ abstract class BaseModel {
             }
         }
         return $obj;
+    }
+
+    public function setRawJson($json){
+	$this->rawJson = $json;
+	return $this;
+    }
+    public function getRawJson(){
+	return $this->rawJson;
     }
 
 }
