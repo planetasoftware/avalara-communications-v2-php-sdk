@@ -15,15 +15,32 @@ abstract class BaseModel {
     const ATTRIBUTE_MAPPING = [];
 
     private $rawJson;
+    private $total_tax = 0;
 
+    /**
+     * To Json
+     * 
+     * @return Json
+     */
     public function toJson() {
         return json_encode($this);
     }
 
+    /**
+     * To Array
+     * 
+     * @return array
+     */
     public function toArray() {
         return json_decode($this->toJson());
     }
 
+    /**
+     * Create from array
+     * 
+     * @param array $array | $class
+     * @return object
+     */
     public static function createFromArray($array, $class = null) {
         //if no class, take the caller class
         if(is_null($class)){
@@ -33,8 +50,8 @@ abstract class BaseModel {
         //create object
         $obj = new $class();
 
-	//save json version of object
-	$obj->setRawJson(json_encode($array));
+    	//save json version of object
+    	$obj->setRawJson(json_encode($array));
 
         //foreach $key => $value pair on the array
         foreach ($array as $key => $value) {
@@ -59,12 +76,53 @@ abstract class BaseModel {
         return $obj;
     }
 
+    /**
+     * Set raw Json
+     *
+     * @param Json $json
+     * @return $this
+     */
     public function setRawJson($json){
-	$this->rawJson = $json;
-	return $this;
+    	$this->rawJson = $json;
+    	return $this;
     }
+
+    /**
+     * Get total tax
+     * 
+     * @return double
+     */
     public function getRawJson(){
-	return $this->rawJson;
+	   return $this->rawJson;
+    }
+
+    /**
+     * Get total tax
+     * 
+     * @return double
+     */
+    public function getTotalTax() {
+
+        foreach ($this->txs as $key => $value) {
+           $this->total_tax += $value->getTax(true);
+        }
+        return $this->total_tax;
+        
+    }
+
+    /**
+     * Get total tax summarized
+     * 
+     * @return double
+     */
+    public function getTotalTaxSummarized() {
+
+        
+        foreach ($this->summ as $key => $value) {
+           $this->total_tax += $value->getTax(true);
+        }
+        return $this->total_tax;
+        
     }
 
 }

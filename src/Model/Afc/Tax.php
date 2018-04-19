@@ -132,7 +132,7 @@ class Tax extends BaseModel {
 
     /**
      * ExemptSaleAmount
-     * Exempt Sale Amount
+     * Exemption Sale Amount
      * 
      * @var double
      */
@@ -271,13 +271,17 @@ class Tax extends BaseModel {
         return $this->name;
     }
 
-     /**
+    /**
      * Get exempt sale amount
      * 
+     * @param boolean $originvalue
      * @return double
      */
-    public function getExemptSaleAmount() {
-        return $this->exm;
+    public function getExemptionSaleAmount($originvalue = false) {
+        if ($originvalue == false)
+            return number_format( $this->exm, 2);
+        else
+            return $this->exm;
     }
 
     /**
@@ -328,10 +332,14 @@ class Tax extends BaseModel {
     /**
      * Get tax 
      * 
+     * @param boolean $originvalue
      * @return double
      */
-    public function getTax() {
-        return $this->tax;
+    public function getTax($originvalue = false) {
+        if ($originvalue == false)
+            return number_format( $this->tax, 2);
+        else
+             return $this->tax;
     }
 
     /**
