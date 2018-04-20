@@ -64,6 +64,14 @@ class LineItemResult extends BaseModel {
     public $err = [];
 
     /**
+     * Total tax per line item
+     * The value of taxes that belong to a Line Item
+     *
+     * @var double
+     */
+    private $total_tax = 0;
+
+    /**
      * Get reference
      * 
      * @return string
@@ -163,6 +171,22 @@ class LineItemResult extends BaseModel {
         $this->err[] = $error;
         return $this;
     }
+
+    /**
+     * Get total tax per line
+     * 
+     * @return double
+     */
+    public function getTotalTax() {
+
+        foreach ($this->txs as $key => $value) {
+           $this->total_tax += $value->getTax(true);
+        }
+        return $this->total_tax;
+        
+    }
+
+
 
 
 }

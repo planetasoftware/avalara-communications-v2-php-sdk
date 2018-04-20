@@ -15,7 +15,7 @@ abstract class BaseModel {
     const ATTRIBUTE_MAPPING = [];
 
     private $rawJson;
-    private $total_tax = 0;
+    
 
     /**
      * To Json
@@ -94,35 +94,6 @@ abstract class BaseModel {
      */
     public function getRawJson(){
 	   return $this->rawJson;
-    }
-
-    /**
-     * Get total tax
-     * 
-     * @return double
-     */
-    public function getTotalTax() {
-
-        foreach ($this->txs as $key => $value) {
-           $this->total_tax += $value->getTax(true);
-        }
-        return $this->total_tax;
-        
-    }
-
-    /**
-     * Get total tax summarized
-     * 
-     * @return double
-     */
-    public function getTotalTaxSummarized() {
-
-        
-        foreach ($this->summ as $key => $value) {
-           $this->total_tax += $value->getTax(true);
-        }
-        return $this->total_tax;
-        
     }
 
 }

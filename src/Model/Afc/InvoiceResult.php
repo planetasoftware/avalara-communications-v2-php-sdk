@@ -56,6 +56,14 @@ class InvoiceResult extends BaseModel{
     public $err = [];
 
     /**
+     * Total tax per all line items
+     * The value of taxes that belong to all Line Items
+     *
+     * @var double
+     */
+    private $total_tax = 0;
+
+    /**
      * Get document code
      * 
      * @return string
@@ -133,5 +141,20 @@ class InvoiceResult extends BaseModel{
     public function addError(\PlanetaSoftware\Avalara\Communications\Model\Common\Error $error){
         $this->err[] = $error;
         return $this;
+    }
+
+    /**
+     * Get total tax summarized
+     * 
+     * @return double
+     */
+    public function getTotalTaxSummarized() {
+
+        
+        foreach ($this->summ as $key => $value) {
+           $this->total_tax += $value->getTax(true);
+        }
+        return $this->total_tax;
+        
     }
 }
